@@ -12,7 +12,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
-        android:text="Favorite Sneakers"
+        android:text="@string/favorite_sneakers"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"

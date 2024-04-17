@@ -7,5 +7,7 @@
     <string name="searchbar_hint">Search...</string>
     <string name="image_description">Image</string>
     <string name="sneaker_price">Rp %d</string>
+    <string name="user_name" translatable="false">Idris Muhammad</string>
+    <string name="welcome">Welcome Back</string>
 
 </resources>

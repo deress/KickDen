@@ -20,22 +20,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val toolbar: MaterialToolbar = binding.topAppBar
-//        setSupportActionBar(toolbar)
-//        supportActionBar?.apply {
-//            title = "KickDen"
-//        }
-
         val navView = binding.bottomNavigationView
 
         val navController = findNavController(R.id.container)
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_favorite
-            )
-        )
-
-//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView . setupWithNavController(navController)
     }
 

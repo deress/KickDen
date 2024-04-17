@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
-        android:text="Welcome Back"
+        android:text="@string/welcome"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Idris Muhammad"
+        android:text="@string/user_name"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -56,6 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </com.google.android.material.search.SearchView>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_sneakers"

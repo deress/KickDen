@@ -54,8 +54,6 @@ android {
 
 dependencies {
     implementation (project(":core"))
-//    implementation (project(":myfeaturemodule"))
-
     implementation (fileTree("libs") {include("*.jar")} )
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0")
     implementation ("com.facebook.shimmer:shimmer:0.5.0")
