@@ -93,6 +93,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onDestroyView() {
+//        binding.rvSneakers.adapter = null
         super.onDestroyView()
         _binding = null
     }

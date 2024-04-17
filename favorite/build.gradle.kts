@@ -2,10 +2,11 @@ plugins {
     id("com.android.dynamic-feature")
     id("org.jetbrains.kotlin.android")
     id ("dagger.hilt.android.plugin")
-//    id ("com.google.dagger.hilt.android")
     id ("kotlin-kapt")
+//    id ("com.google.dagger.hilt.android")
 }
 apply (from = "../shared_dependencies.gradle")
+
 
 android {
     namespace = "com.dicoding.kikcden.favorite"
@@ -14,16 +15,6 @@ android {
     defaultConfig {
         minSdk = 24
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
     }
 
     compileOptions {

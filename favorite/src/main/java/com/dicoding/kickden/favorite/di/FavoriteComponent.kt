@@ -1,8 +1,8 @@
-package com.dicoding.kikcden.favorite.di
+package com.dicoding.kickden.favorite.di
 
 import android.content.Context
 import com.dicoding.kickden.di.FavoriteModuleDependencies
-import com.dicoding.kikcden.favorite.ui.FavoriteFragment
+import com.dicoding.kickden.favorite.ui.FavoriteFragment
 import dagger.BindsInstance
 import dagger.Component
 

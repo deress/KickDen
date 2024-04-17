@@ -1,4 +1,4 @@
-package com.dicoding.kikcden.favorite.ui
+package com.dicoding.kickden.favorite.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,16 +11,17 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.kickden.core.domain.model.Sneakers
 import com.dicoding.kickden.core.ui.SneakersAdapter
-import com.dicoding.kickden.databinding.FragmentFavoriteBinding
 import com.dicoding.kickden.detail.DetailActivity
 import com.dicoding.kickden.di.FavoriteModuleDependencies
-import com.dicoding.kikcden.favorite.di.DaggerFavoriteComponent
-import com.dicoding.kikcden.favorite.di.ViewModelFactory
+import com.dicoding.kickden.favorite.di.DaggerFavoriteComponent
+import com.dicoding.kickden.favorite.di.ViewModelFactory
+import com.dicoding.kikcden.favorite.databinding.FragmentFavoriteBinding
 import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
 
 //@AndroidEntryPoint
 class FavoriteFragment : Fragment() {
+
     private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
     private val sneakersAdapter: SneakersAdapter by lazy { SneakersAdapter(::sneakerItemClicked) }
@@ -58,8 +59,15 @@ class FavoriteFragment : Fragment() {
         binding.rvSneakers.layoutManager = layoutManager
 
         viewModel.listSneakers.observe(viewLifecycleOwner) { result ->
-            showListSneakers(result)
-            if (result.isNotEmpty()) showLoading(false) else showLoading(true)
+            showLoading(true)
+            if (result.isNotEmpty()) {
+                showLottie(false)
+                showLoading(false)
+                showListSneakers(result)
+            } else if (result.isEmpty()) {
+                showLottie(true)
+                showLoading(false)
+            }
         }
     }
 
@@ -71,6 +79,14 @@ class FavoriteFragment : Fragment() {
 
     private fun showLoading(isLoading:Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun showLottie(isLottieVisible: Boolean) {
+        binding.apply {
+            tvEmpty.visibility = if (isLottieVisible) View.VISIBLE else View.GONE
+            avEmptybox.visibility =
+                if (isLottieVisible) View.VISIBLE else View.GONE
+        }
     }
 
     private fun sneakerItemClicked(sneakers: Sneakers) {

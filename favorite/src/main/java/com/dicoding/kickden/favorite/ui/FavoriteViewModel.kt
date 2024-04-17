@@ -1,5 +1,6 @@
-package com.dicoding.kikcden.favorite.ui
+package com.dicoding.kickden.favorite.ui
 
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.dicoding.kickden.core.domain.usecase.SneakersUseCase

@@ -3,6 +3,7 @@ package com.dicoding.kickden
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
+
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
@@ -19,11 +20,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val toolbar: MaterialToolbar = binding.topAppBar
-        setSupportActionBar(toolbar)
-        supportActionBar?.apply {
-            title = "KickDen"
-        }
+//        val toolbar: MaterialToolbar = binding.topAppBar
+//        setSupportActionBar(toolbar)
+//        supportActionBar?.apply {
+//            title = "KickDen"
+//        }
 
         val navView = binding.bottomNavigationView
 
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView . setupWithNavController(navController)
     }
 

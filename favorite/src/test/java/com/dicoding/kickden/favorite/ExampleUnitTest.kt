@@ -1,4 +1,4 @@
-package com.dicoding.kikcden.favorite
+package com.dicoding.kickden.favorite
 
 import org.junit.Test
 

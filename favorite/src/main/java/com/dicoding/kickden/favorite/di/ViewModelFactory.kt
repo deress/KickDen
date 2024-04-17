@@ -1,9 +1,9 @@
-package com.dicoding.kikcden.favorite.di
+package com.dicoding.kickden.favorite.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.kickden.core.domain.usecase.SneakersUseCase
-import com.dicoding.kikcden.favorite.ui.FavoriteViewModel
+import com.dicoding.kickden.favorite.ui.FavoriteViewModel
 import javax.inject.Inject
 
 class ViewModelFactory @Inject constructor(private val sneakersUseCase: SneakersUseCase) : ViewModelProvider.NewInstanceFactory() {
