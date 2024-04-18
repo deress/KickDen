@@ -4,16 +4,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Red -->
-    <color name="red_200">#FFEF9A9A</color>
     <color name="red_500">#FFF44336</color>
     <color name="red_700">#FFD32F2F</color>
-    <!-- Amber -->
-    <color name="amber_200">#FFFFE082</color>
-    <color name="amber_500">#FFFFC107</color>
-    <color name="amber_700">#FFFFA000</color>
+
 
     <!-- Monk skin tone -->
-    <color name="monk_03">#FFF7EAD0</color>
     <color name="monk_04">#FFEADABA</color>
     <color name="monk_05">#FFD7BD96</color>
 

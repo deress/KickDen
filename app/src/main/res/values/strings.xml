@@ -3,11 +3,13 @@
     <string name="title_home">Home</string>
     <string name="title_favorite">Favorite</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="searchbar_hint">Search...</string>
+    <string name="searchbar_hint">Search…</string>
     <string name="image_description">Image</string>
     <string name="sneaker_price">Rp %d</string>
     <string name="user_name" translatable="false">Idris Muhammad</string>
     <string name="welcome">Welcome Back</string>
+    <string name="favorite_button">favorite button</string>
+    <string name="color">Color</string>
+    <string name="price">Price</string>
 
 </resources>

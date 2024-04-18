@@ -59,11 +59,10 @@ class FavoriteFragment : Fragment() {
         binding.rvSneakers.layoutManager = layoutManager
 
         viewModel.listSneakers.observe(viewLifecycleOwner) { result ->
-            showLoading(true)
+            showListSneakers(result)
             if (result.isNotEmpty()) {
                 showLottie(false)
                 showLoading(false)
-                showListSneakers(result)
             } else if (result.isEmpty()) {
                 showLottie(true)
                 showLoading(false)

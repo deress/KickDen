@@ -10,5 +10,4 @@ import javax.inject.Inject
 @HiltViewModel
 class FavoriteViewModel @Inject constructor(sneakersUseCase: SneakersUseCase) : ViewModel() {
     val listSneakers = sneakersUseCase.getFavoriteSneakers().asLiveData()
-
 }
